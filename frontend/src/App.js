@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+ï»¿import React, { useState } from 'react';
 import './App.css';
 
 function App() {
   const [todos, setTodos] = useState([
-    { id: 1, text: 'Ñ§Ï° React', completed: false },
-    { id: 2, text: '´´½¨ TodoList ÏîÄ¿', completed: true },
+    { id: 1, text: 'å­¦ä¹  React', completed: false },
+    { id: 2, text: 'åˆ›å»º TodoList é¡¹ç›®', completed: true },
   ]);
   const [input, setInput] = useState('');
   const [filter, setFilter] = useState('all'); // all, active, completed
@@ -54,11 +54,11 @@ function App() {
           <input
             type="text"
             className="todo-input"
-            placeholder="Ìí¼ÓĞÂÈÎÎñ..."
+            placeholder="æ·»åŠ æ–°ä»»åŠ¡..."
             value={input}
             onChange={(e) => setInput(e.target.value)}
           />
-          <button type="submit" className="todo-add">Ìí¼Ó</button>
+          <button type="submit" className="todo-add">æ·»åŠ </button>
         </form>
 
         <div className="filters">
@@ -66,19 +66,19 @@ function App() {
             className={`filter-btn ${filter === 'all' ? 'active' : ''}`}
             onClick={() => setFilter('all')}
           >
-            È«²¿ ({todos.length})
+            å…¨éƒ¨ ({todos.length})
           </button>
           <button
             className={`filter-btn ${filter === 'active' ? 'active' : ''}`}
             onClick={() => setFilter('active')}
           >
-            ½øĞĞÖĞ ({activeCount})
+            è¿›è¡Œä¸­ ({activeCount})
           </button>
           <button
             className={`filter-btn ${filter === 'completed' ? 'active' : ''}`}
             onClick={() => setFilter('completed')}
           >
-            ÒÑÍê³É ({todos.length - activeCount})
+            å·²å®Œæˆ ({todos.length - activeCount})
           </button>
         </div>
 
@@ -96,14 +96,14 @@ function App() {
                 className="todo-delete"
                 onClick={() => deleteTodo(todo.id)}
               >
-                É¾³ı
+                åˆ é™¤
               </button>
             </li>
           ))}
         </ul>
 
         {filteredTodos.length === 0 && (
-          <div className="empty-state">ÔİÎŞÈÎÎñ</div>
+          <div className="empty-state">æš‚æ— ä»»åŠ¡</div>
         )}
       </div>
     </div>
