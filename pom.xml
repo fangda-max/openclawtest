@@ -13,9 +13,9 @@
     </parent>
 
     <groupId>com.example</groupId>
-    <artifactId>ai-bot</artifactId>
+    <artifactId>aibot</artifactId>
     <version>1.0.0</version>
-    <name>ai-bot</name>
+    <name>aibot</name>
     <description>AI Bot Backend Application</description>
 
     <properties>

@@ -1,6 +1,6 @@
-package com.example.ai_bot.controller;
+package com.example.aibot.controller;
 
-import com.example.ai_bot.common.Result;
+import com.example.aibot.common.Result;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,7 +21,7 @@ public class HealthController {
         Map<String, Object> data = new HashMap<>();
         data.put("status", "UP");
         data.put("timestamp", LocalDateTime.now());
-        data.put("application", "ai-bot");
+        data.put("application", "aibot");
         return Result.success(data);
     }
 }

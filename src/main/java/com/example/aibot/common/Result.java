@@ -1,4 +1,4 @@
-package com.example.ai_bot.common;
+package com.example.aibot.common;
 
 import lombok.Data;
 
