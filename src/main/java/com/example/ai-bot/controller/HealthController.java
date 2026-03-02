@@ -1,0 +1,27 @@
+package com.example.ai_bot.controller;
+
+import com.example.ai_bot.common.Result;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.time.LocalDateTime;
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * ½¡¿µ¼ì²é¿ØÖÆÆ÷
+ */
+@RestController
+@RequestMapping("/health")
+public class HealthController {
+    
+    @GetMapping
+    public Result<Map<String, Object>> health() {
+        Map<String, Object> data = new HashMap<>();
+        data.put("status", "UP");
+        data.put("timestamp", LocalDateTime.now());
+        data.put("application", "ai-bot");
+        return Result.success(data);
+    }
+}
